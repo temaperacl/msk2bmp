@@ -167,6 +167,7 @@ int main(int ArgC, const char ** ArgV)
 {
     if ( ArgC < 2) {
         std::cout << "Input File Required";
+        return 1;
     }
     bool bFlipVertical = true;
 
@@ -175,6 +176,7 @@ int main(int ArgC, const char ** ArgV)
     if (!infile.is_open())
     {
         std::cout << "Unable to open file";
+        return 1;
     }
 
     // Lines of bits. Essentially the raw MSK file.
